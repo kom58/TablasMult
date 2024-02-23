@@ -82,6 +82,7 @@
                   <editable value="false"/>
                   <enabled value="false"/>
                   <font name="Courier" size="16"/>
+                  <lineWrap value="false"/>
                   <margin top="10" left="10" bottom="0" right="0"/>
                   <text value=""/>
                 </properties>

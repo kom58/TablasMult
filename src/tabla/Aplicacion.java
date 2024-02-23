@@ -33,6 +33,8 @@ public class Aplicacion {
         frame.setContentPane(new Aplicacion().panBase);
         frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setSize(500,400);
+        frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
