@@ -1,40 +1,20 @@
 package tabla;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Aplicacion {
 
     private JPanel panBase;
-    private JPanel panSuperior;
-    private JPanel panMedio;
-    private JPanel panInferior;
     private JButton btnSalir;
     private JButton btnTabla;
-    private JLabel txtTitulo;
-    private JPanel panIzq;
-    private JPanel panDer;
-    private JLabel titNomTabla;
     private JTextField txtTabla;
     private JTextArea tarTabla;
 
-
     public Aplicacion() {
 
-        btnTabla.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-                escribeTabla();
-            }
-        });
-
-        btnSalir.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-                System.exit(0);
-            }
-        });
+        btnTabla.addActionListener(e -> escribeTabla());
+        btnSalir.addActionListener(e -> System.exit(0));
+        txtTabla.addActionListener(e -> escribeTabla());
     }
 
     public void escribeTabla() {
@@ -47,7 +27,6 @@ public class Aplicacion {
             tarTabla.append(String.format(" %2d  x %2d  = %4d \n", n, i, n * i));
         }
     }
-
 
     public static void main(String[] args) {
         javax.swing.JFrame frame = new javax.swing.JFrame("Tablas");
